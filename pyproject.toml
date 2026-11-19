@@ -1,0 +1,23 @@
+[project]
+name = "lab0"
+version = "0.1.0"
+description = "Lab0 - Fundamentals of Continuous Integration: data preprocessing library with a command line interface."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "black>=26.10.1",
+    "click>=8.5.1",
+    "pylint>=4.1.4",
+    "pytest>=9.2.0",
+    "pytest-cov>=7.1.0",
+]
+
+[project.scripts]
+lab0 = "src.cli:cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
